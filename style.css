@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Noto+Sans:wght@100&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Bricolage Grotesque';
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+#main-login {
+    background: #ccc;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#container {
+    padding: 25px 20px;
+    background: white;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#container h1 {
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.campos-login {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.campos-login input {
+    width: 100%;
+    padding: 2px 0;
+    text-indent: 2px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+#btn-login {
+    width: 30%;
+    padding: 7px;
+    background-color: #4169E1;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+#btn-login:hover {
+    background-color: #87CEEB;
+}
+
+.campos-login input:focus {
+    outline-color: #4169E1;
+}
+
+.error-class {
+    border: 2px solid rgb(242, 144, 144);
+}
+
+.forms #cadastrar, .forms #recuperarSenha {
+    color: #4169E1;
+}
+
+#login-outros {
+    text-align: center;
+}
+
+.forms #cadastrar:hover, .forms #recuperarSenha:hover {
+    color: #87CEEB;
+    cursor: pointer;
+}
+
+
+
+#main-cadastrar, #main-informacoes {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    box-sizing: border-box;
+}
+
+#conteudo, #conteudo-informacoes {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 35px;
+}
+
+.campos-cadastrar, .campos-informacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.inputs-cadastrar, .inputs-informacoes {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-cadastrar input, .inputs-informacoes input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.inputs-cadastrar input:focus, .inputs-informacoes input:focus {
+    outline-color: blue;
+}
+
+
+
+.estilo-botao:hover {
+    background-color: #87CEEB;
+
+}
+
+
+.estilo-botao {
+    background-color: #4169E1;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    width: 10em;
+    padding: 15px;
+    outline: none;
+}
+
+
+#btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#main-recuperar {
+    background: #ccc;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-recuperar {
+    padding: 20px 20px 30px 20px;
+    background: white;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campos-recuperar {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    gap: 20px;
+}
+
+.campos-recuperar input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.inputs-recuperar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#btns-recuperar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+#alterar, #voltarRecuperar {
+    width: 20%;
+    padding: 7px;
+    background-color: #4169E1;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+#alterar:hover, #voltarRecuperar:hover {
+    background-color: #87CEEB;
+}
+
+@media only screen and (max-width: 1000px) {
+    #container {
+        width: 40vw;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    button {
+        touch-action: manipulation;
+    }
+
+    #main-login {
+        height: auto;
+        width: 100%;
+    }
+
+    #container {
+        padding: 0;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    #center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    #container h1 {
+        font-size: 25pt;
+        font-weight: bold;
+    }
+
+    .forms {
+        width: 80%;
+    }
+
+    .campos-login {
+        width: 90%;
+    }
+
+    .campos-login input {
+        width: 100%;
+        padding: 5px 0;
+        border-radius: 10px;
+        font-size: 16pt;
+        margin: 0;
+    }
+
+    .error-class {
+        border: 1px solid rgb(242, 144, 144);
+    }
+
+    .campos-login label {
+        font-size: 17pt;
+        font-weight: 600;
+    }
+
+    #btn-login {
+        width: 30%;
+        font-size: 15pt;
+        background-color: #4169E1;
+        align-self: flex-end;
+        border-radius: 5px;
+        margin-right: 6%;
+    }
+
+    #btn-login:hover {
+        background-color: #4169E1;
+    }
+
+    .forms span {
+        font-size: 15pt;
+    }
+
+    #main-cadastrar, #main-informacoes {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        margin: 0;
+    }
+
+    #conteudo, #conteudo-informacoes {
+        width: 100%;
+        margin: 0;
+        gap: 10px;
+        background-color: #fff;
+        padding: 35px;
+    }
+
+    #conteudo h1, #conteudo-informacoes h1{
+        font-size: 25pt;
+    }
+
+    .campos-cadastrar, .campos-informacoes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .inputs-cadastrar, .inputs-informacoes {
+        width: 80%;
+        padding: 1.5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputs-cadastrar input, .inputs-informacoes input {
+        width: 98%;
+        box-sizing: border-box;
+        font-size: 16pt;
+    }
+
+    .inputs-cadastrar label, .inputs-informacoes label {
+        font-size: 17pt;
+        font-weight: 600;
+    }
+
+    .error-class {
+        border: 1px solid rgb(242, 144, 144);
+    }
+
+    .estilo-botao:hover {
+        background-color: #4169E1;
+    }
+
+    .estilo-botao {
+        background-color: #4169E1;
+        margin: 20px 0 0 0;
+        font-size: 12pt;
+        width: 8em;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+
+}
+

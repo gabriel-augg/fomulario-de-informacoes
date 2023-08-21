@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <main id="main-cadastrar">
+        <div class="forms" id="conteudo">
+            <h1>Cadastrar</h1>
+            <div class="campos-cadastrar">
+                <div class="inputs-cadastrar">
+                    <label for="nome">Nome:</label>
+                    <input type="nome" class="inputs letraMaiuscula" maxlength="10" id="nome" name="nome">
+                </div>
+                <div class="inputs-cadastrar">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="sobrenome" class="inputs letraMaiuscula" id="sobrenome" name="sobrenome">
+                </div>
+            </div>
+            <div class="campos-cadastrar">
+                <div class="inputs-cadastrar">
+                    <label for="usuario">Usuário</label>
+                    <input  class="inputs" type="text" id="usuario" name="usuario">
+                </div>
+                <div class="inputs-cadastrar">
+                    <label for="email">Email:</label>
+                    <input type="email" class="inputs letraMaiuscula" id="email" name="email">
+                </div>
+            </div>
+            <div class="campos-cadastrar">
+                <div class="inputs-cadastrar">
+                    <label for="comida">Comida favorita:</label>
+                    <input type="text" class="inputs letraMaiuscula" id="comida" name="comida">
+                </div>
+                <div class="inputs-cadastrar">
+                    <label for="animal">Animal favorito:</label>
+                    <input type="text" class="inputs letraMaiuscula" id="animal" name="animal">
+                </div>
+            </div>
+            <div class="campos-cadastrar">
+                <div class="inputs-cadastrar">
+                    <label for="senhaCadastrar">Senha:</label>
+                    <input required minlength="8" class="inputs"  type="password" id="senhaCadastrar" name="senha">
+                </div>
+                <div class="inputs-cadastrar">
+                    <label for="repetirSenha">Repetir senha:</label>
+                    <input required minlength="8" class="inputs" type="password" id="repetirSenha" name="repetir">
+                </div>
+            </div>
+            <div id="btns">
+                <button id="btn-cadastrar" class="estilo-botao">Cadastrar</button>
+                <button id="salvar" class="estilo-botao" style="display: none;">Salvar</button>
+                <button id="editar" class="estilo-botao" style="display: none;">Editar</button>
+                <button id="voltar" class="estilo-botao">Voltar</button>
+            </div>
+        </div>
+    </main>   
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <main id="main-informacoes">
+        <section>
+                <div class="forms" id="conteudo-informacoes">
+                 <h1>Informações</h1>
+                 <div class="campos-informacoes">
+                     <div class="inputs-cadastrar">
+                         <label for="nome">Nome:</label>
+                         <input class="inputs letraMaiuscula"  type="nome" disabled  id="nome" name="nome">
+                     </div>
+                     <div class="inputs-informacoes">
+                         <label for="sobrenome">Sobrenome:</label>
+                         <input class="inputs letraMaiuscula"  type="sobrenome" disabled  id="sobrenome" name="sobrenome">
+                     </div>
+                 </div>
+                 <div class="campos-informacoes">
+                     <div class="inputs-cadastrar">
+                         <label for="usuario">Usuário</label>
+                         <input class="inputs"   type="text" disabled  id="usuario" name="usuario">
+                     </div>
+                     <div class="inputs-informacoes">
+                         <label for="email">Email:</label>
+                         <input class="inputs letraMaiuscula"  type="email" disabled autocomplete="email" id="email" name="email">
+                     </div>
+                 </div>
+                 <div class="campos-informacoes">
+                     <div class="inputs-cadastrar">
+                         <label for="comida">Comida favorita:</label>
+                         <input class="inputs letraMaiuscula"  type="text"id="comida" disabled name="comida">
+                     </div>
+                     <div class="inputs-informacoes">
+                         <label for="animal">Animal favorito:</label>
+                         <input class="inputs letraMaiuscula"  type="text" disabled id="animal" name="animal">
+                     </div>
+                 </div>
+                 <div class="campos-informacoes">
+                     <div class="inputs-cadastrar">
+                         <label for="senhaCadastrar">Senha:</label>
+                         <input  class="inputs"  disabled type="password" id="senhaCadastrar" name="senha">
+                     </div>
+                     <div class="inputs-informacoes">
+                         <label for="repetirSenha">Repetir senha:</label>
+                         <input  class="inputs" disabled  type="password" id="repetirSenha" name="repetir">
+                     </div>
+                 </div>
+                 <div id="btns">
+                     <button id="salvar-informacoes" class="estilo-botao" style="display: none;">Salvar</button>
+                     <button id="editar-informacoes" class="estilo-botao" style="display: block;">Editar</button>
+                     <button id="sair" class="estilo-botao">Sair</button>
+                 </div>
+                </div>
+        </section>
+    </main>  
+    <script src="script.js"></script>
+</body>
+</html>
