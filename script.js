@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         recuperarLink.addEventListener('click', () => {
-            window.location.href = "recuperar.html"
+           // window.location.href = "recuperar.html"
         })
 
     

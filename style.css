@@ -305,6 +305,8 @@ body * {
         background-color: #4169E1;
     }
 
+
+
     .forms span {
         font-size: 15pt;
     }
@@ -369,6 +371,11 @@ body * {
         width: 8em;
         padding: 10px;
         border-radius: 5px;
+    }
+
+    .forms #cadastrar:hover, .forms #recuperarSenha:hover {
+        color: #4169E1;
+        cursor: pointer;
     }
     
 
