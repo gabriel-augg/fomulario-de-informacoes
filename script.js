@@ -481,11 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userString = sessionStorage.getItem('meuLogin')
         usuarios = JSON.parse(userString)
 
-
-        
-        
-
-
+  
 
         btnRecuperar.addEventListener('click', () => {
 
@@ -499,6 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const campoSenha = document.getElementById('senhaNova')
             const campoNovaSenha = document.getElementById('repetirSenhaNova')
             const inputsRecuperar = document.getElementsByClassName('inputsRecuperar')
+
 
     
             usuarios.forEach(u => {
@@ -565,7 +562,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 sessionStorage.setItem('meuLogin', JSON.stringify(usuarios));
 
             }
-
         })
 
 
