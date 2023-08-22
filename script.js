@@ -131,8 +131,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             let novoUsuario;
-            
-            if (senhaCadastrar !== repetirSenha) {
+
+            if (user === "" && senhaCadastrar === "" && repetirSenha === "" && name === "" && sobreNome === "") {
+                document.getElementById('repetirSenha').classList.add("error-class")
+                document.getElementById('senhaCadastrar').classList.add("error-class")
+                document.getElementById('usuario').classList.add("error-class")
+                document.getElementById('nome').classList.add('error-class')
+                document.getElementById('sobrenome').classList.add('error-class')
+
+                setTimeout(function(){
+                    document.getElementById("repetirSenha").classList.remove('error-class')
+                    document.getElementById("senhaCadastrar").classList.remove('error-class')
+                    document.getElementById("usuario").classList.remove('error-class')
+                    document.getElementById('nome').classList.remove('error-class')
+                    document.getElementById('sobrenome').classList.remove('error-class')
+                }, 500)
+
+            } else if (name === "") {
+
+                document.getElementById('nome').classList.add('error-class')
+
+                setTimeout(function(){
+                    document.getElementById('nome').classList.remove('error-class')
+                    document.getElementById('sobrenome').classList.remove('error-class')
+                }, 500)
+
+            } else if (sobreNome === "") {
+
+                document.getElementById('sobrenome').classList.add('error-class')
+
+                setTimeout(function(){
+                    document.getElementById('sobrenome').classList.remove('error-class')
+                }, 500)
+
+            } else if (senhaCadastrar !== repetirSenha) {
 
                 document.getElementById('senhaCadastrar').value = ""
                 document.getElementById('repetirSenha').value = ""
@@ -152,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(function(){
                     document.getElementById("repetirSenha").classList.remove('error-class')
                     document.getElementById("senhaCadastrar").classList.remove('error-class')
-                    document.getElementById("usuario").classList.remove('error-class')
                 }, 500)
 
             } else if (user.length < 6 || user === "") {
@@ -210,14 +241,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         salvar.addEventListener('click', () => {
 
-            let senhaCadastrar = document.getElementById('senhaCadastrar').value
-            let repetirSenha = document.getElementById('repetirSenha').value
-            let user = document.getElementById('usuario').value
-            let name = document.getElementById('nome').value
-            let sobreNome = document.getElementById('sobrenome').value
-            let email = document.getElementById('email').value
-            let animal = document.getElementById('animal').value
-            let comida = document.getElementById('comida').value
+            const senhaCadastrar = document.getElementById('senhaCadastrar').value
+            const repetirSenha = document.getElementById('repetirSenha').value
+            const user = document.getElementById('usuario').value
+            const name = document.getElementById('nome').value
+            const sobreNome = document.getElementById('sobrenome').value
+            const email = document.getElementById('email').value
+            const animal = document.getElementById('animal').value
+            const comida = document.getElementById('comida').value
 
             let userExistente = false;
             let usuarioAtual;
@@ -237,7 +268,39 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
 
-            if (senhaCadastrar !== repetirSenha) {
+
+            if (user === "" && senhaCadastrar === "" && repetirSenha === "" && name === "" && sobreNome === "") {
+                document.getElementById('repetirSenha').classList.add("error-class")
+                document.getElementById('senhaCadastrar').classList.add("error-class")
+                document.getElementById('usuario').classList.add("error-class")
+                document.getElementById('nome').classList.add('error-class')
+                document.getElementById('sobrenome').classList.add('error-class')
+
+                setTimeout(function(){
+                    document.getElementById("repetirSenha").classList.remove('error-class')
+                    document.getElementById("senhaCadastrar").classList.remove('error-class')
+                    document.getElementById("usuario").classList.remove('error-class')
+                    document.getElementById('nome').classList.remove('error-class')
+                    document.getElementById('sobrenome').classList.remove('error-class')
+                }, 500)
+
+            } else if (name === "") {
+
+                document.getElementById('nome').classList.add('error-class')
+
+                setTimeout(function(){
+                    document.getElementById('nome').classList.remove('error-class')
+                }, 500)
+
+            } else if (sobreNome === "") {
+
+                document.getElementById('sobrenome').classList.add('error-class')
+
+                setTimeout(function(){
+
+                    document.getElementById('sobrenome').classList.remove('error-class')
+                }, 500)
+            } else if (senhaCadastrar !== repetirSenha) {
                 document.getElementById('senhaCadastrar').value = ""
                 document.getElementById('repetirSenha').value = ""
                 document.getElementById('repetirSenha').classList.add("error-class")
@@ -358,14 +421,14 @@ document.addEventListener('DOMContentLoaded', () => {
         salvarInformacoes.addEventListener('click', () => {
 
 
-            let senhaCadastrar = document.getElementById('senhaCadastrar').value
-            let repetirSenha = document.getElementById('repetirSenha').value
-            let user = document.getElementById('usuario').value
-            let name = document.getElementById('nome').value
-            let sobreNome = document.getElementById('sobrenome').value
-            let email = document.getElementById('email').value
-            let animal = document.getElementById('animal').value
-            let comida = document.getElementById('comida').value
+            const senhaCadastrar = document.getElementById('senhaCadastrar').value
+            const repetirSenha = document.getElementById('repetirSenha').value
+            const user = document.getElementById('usuario').value
+            const name = document.getElementById('nome').value
+            const sobreNome = document.getElementById('sobrenome').value
+            const email = document.getElementById('email').value
+            const animal = document.getElementById('animal').value
+            const comida = document.getElementById('comida').value
             
 
             
@@ -384,9 +447,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            if (user === "" && senhaCadastrar === "" && repetirSenha === "" && name === "" && sobreNome === "") {
+                document.getElementById('repetirSenha').classList.add("error-class")
+                document.getElementById('senhaCadastrar').classList.add("error-class")
+                document.getElementById('usuario').classList.add("error-class")
+                document.getElementById('nome').classList.add('error-class')
+                document.getElementById('sobrenome').classList.add('error-class')
 
+                setTimeout(function(){
+                    document.getElementById("repetirSenha").classList.remove('error-class')
+                    document.getElementById("senhaCadastrar").classList.remove('error-class')
+                    document.getElementById("usuario").classList.remove('error-class')
+                    document.getElementById('nome').classList.remove('error-class')
+                    document.getElementById('sobrenome').classList.remove('error-class')
+                }, 500)
 
-            if (senhaCadastrar !== repetirSenha) {
+            } else if (name === "") {
+
+                document.getElementById('nome').classList.add('error-class')
+
+                setTimeout(function(){
+                    document.getElementById('nome').classList.remove('error-class')
+                }, 500)
+
+            } else if (sobreNome === "") {
+
+                document.getElementById('sobrenome').classList.add('error-class')
+
+                setTimeout(function(){
+
+                    document.getElementById('sobrenome').classList.remove('error-class')
+                }, 500)
+                
+            }  else if (senhaCadastrar !== repetirSenha) {
 
                 document.getElementById('senhaCadastrar').value = ""
                 document.getElementById('repetirSenha').value = ""
@@ -556,8 +649,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 })
 
-                btnRecuperar.style.opacity = "0.5"
-                btnRecuperar.style.pointerEvents = "none"
+                btnRecuperar.style.backgroundColor = "#7CA0EB"
+                btnRecuperar.style.cursor = "not-allowed"
                 btnRecuperar.disabled = "true"
                 sessionStorage.setItem('meuLogin', JSON.stringify(usuarios));
 
@@ -568,8 +661,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btnVoltar.addEventListener('click', () => {
             window.location.href = "index.html"
         })
-
-
 
     }
 })
