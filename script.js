@@ -48,7 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 }
             })
-                if (userNaoEncontrado) {
+
+                if (usuario === "" && password === "") {
+                    document.getElementById("usuario").classList.add('error-class')
+                    document.getElementById("senha").classList.add('error-class')
+                    setTimeout(function(){
+                        document.getElementById("usuario").classList.remove('error-class')
+                        document.getElementById("senha").classList.remove('error-class')
+                    }, 500)
+
+                } else if (userNaoEncontrado) {
                     document.getElementById("usuario").classList.add('error-class')
                     setTimeout(function(){
                         document.getElementById("usuario").classList.remove('error-class')
