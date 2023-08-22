@@ -30,35 +30,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
         botao.addEventListener('click', () => {
             let usuarioEncontrado = false
+            let userNaoEncontrado = false
             
             const usuario = document.getElementById('usuario').value
             const password = document.getElementById('senha').value
 
-            if (usuario === "" || password === "") {
-                
-            }
-
             usuarios.forEach(u => {
+                if (u.nome !== usuario) {
+                    userNaoEncontrado = true
+                } else {
+                    userNaoEncontrado = false
+                }
 
                 if (u.nome === usuario && u.senha === password ) {
+                    
                     usuarioEncontrado = true
                     u.valor = true
 
                 }
             })
+                if (userNaoEncontrado) {
+                    document.getElementById("usuario").classList.add('error-class')
+                    setTimeout(function(){
+                        document.getElementById("usuario").classList.remove('error-class')
+                    }, 500)
+                } else if (usuarioEncontrado){
 
-                if (usuarioEncontrado){
                     sessionStorage.setItem('meuLogin', JSON.stringify(usuarios));
                     window.location.href = "informacoes.html"
 
                 } else {
-                    document.getElementById("usuario").classList.add('error-class')
                     document.getElementById("senha").classList.add('error-class')
                     setTimeout(function(){
-                        document.getElementById("usuario").classList.remove('error-class')
                         document.getElementById("senha").classList.remove('error-class')
                     }, 500)
-                    document.getElementById('usuario').value = ""
                     document.getElementById('senha').value = ""
                 }
 
@@ -71,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         recuperarLink.addEventListener('click', () => {
-           // window.location.href = "recuperar.html"
+           window.location.href = "recuperar.html"
         })
 
     
@@ -455,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
         
-    } /* else if (document.getElementById('main-recuperar')) {
+    }  else if (document.getElementById('main-recuperar')) {
 
         const btnRecuperar = document.getElementById('alterar')
         const btnVoltar = document.getElementById('voltarRecuperar')
@@ -472,12 +477,14 @@ document.addEventListener('DOMContentLoaded', () => {
         usuarios = JSON.parse(userString)
 
         console.log(usuarios)
+        
+        
 
 
 
         btnRecuperar.addEventListener('click', () => {
 
-
+            
             const nomeUsuario = document.getElementById('nomeUsuario').value
             const sobrenomeUsuario = document.getElementById('sobrenomeUsuario').value
             const campoNome = document.getElementById('nomeUsuario')
@@ -488,15 +495,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const campoNovaSenha = document.getElementById('repetirSenhaNova')
             const inputsRecuperar = document.getElementsByClassName('inputsRecuperar')
 
+    
             usuarios.forEach(u => {
-                if ((u.nome !== nomeUsuario || u.sobreNome !== sobrenomeUsuario)) {
+                console.log(`${u.name.trim()}, ${u.sobrenome.trim()}, ${nomeUsuario.trim()}, ${sobrenomeUsuario.trim()}`)
+                if ((u.name !== nomeUsuario || u.sobrenome !== sobrenomeUsuario)) {
                     usuarioNaoExiste = true
+                } else {
+                    usuarioNaoExiste = false
                 }
             })
 
 
-
-            if (nomeUsuario === "" || sobrenomeUsuario === "") {
+            if (nomeUsuario === "" || sobrenomeUsuario === "" || usuarioNaoExiste) {
                 campoNome.classList.add("error-class")
                 campoSobrenome.classList.add("error-class")
 
@@ -522,7 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     campoSenha.classList.remove('error-class')
                     campoNovaSenha.classList.remove('error-class')
                 }, 500)
-            } /*else if (usuarioNaoExiste) {
+            } else if (usuarioNaoExiste) {
 
                 campoNome.classList.add("error-class")
                 campoSobrenome.classList.add("error-class")
@@ -533,22 +543,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 500)
             } else {
                 usuarios.forEach(u => {
-                if ((u.nome === nomeUsuario && u.sobreNome === sobrenomeUsuario)) {
-                    u.senha = senhaNova.trim()
-                }
+                   
+                    if ((u.name === nomeUsuario && u.sobrenome === sobrenomeUsuario)) {
+                        u.senha = senhaNova.trim()
+                    }
 
-                for (let i = 0; i < inputsRecuperar.length ; i++) {
-                    inputsRecuperar[i].disabled = true
-                }
+                    for (let i = 0; i < inputsRecuperar.length ; i++) {
+                        inputsRecuperar[i].disabled = true
+                    }
 
+                })
+
+                btnRecuperar.style.opacity = "0.5"
+                btnRecuperar.style.pointerEvents = "none"
                 btnRecuperar.disabled = "true"
-
                 sessionStorage.setItem('meuLogin', JSON.stringify(usuarios));
 
-            })
             }
-
-
 
         })
 
@@ -559,7 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    }*/
+    }
 })
 
 
