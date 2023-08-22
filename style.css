@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Noto+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Noto+Sans:wght@100&family=Rubik:wght@300&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Bricolage Grotesque';
+    font-family: 'Rubik', sans-serif;
 }
 
 body * {
@@ -10,7 +10,7 @@ body * {
 }
 
 #main-login {
-    background: #ccc;
+    background: #808080;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -26,6 +26,7 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 #center {
@@ -71,10 +72,13 @@ body * {
     border: none;
     outline: none;
     color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 #btn-login:hover {
-    background-color: #87CEEB;
+    background-color: #7CA0EB;
+    transition: 0.2s all;
 }
 
 .campos-login input:focus {
@@ -94,7 +98,8 @@ body * {
 }
 
 .forms #cadastrar:hover, .forms #recuperarSenha:hover {
-    color: #87CEEB;
+    color: #7CA0EB;
+    transition: 0.2s all;
     cursor: pointer;
 }
 
@@ -106,7 +111,7 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ccc;
+    background-color: #808080;
     box-sizing: border-box;
 }
 
@@ -118,6 +123,7 @@ body * {
     gap: 20px;
     background-color: #fff;
     padding: 35px;
+    border-radius: 10px;
 }
 
 .campos-cadastrar, .campos-informacoes {
@@ -137,6 +143,7 @@ body * {
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
+    
 }
 
 .inputs-cadastrar input:focus, .inputs-informacoes input:focus {
@@ -146,7 +153,8 @@ body * {
 
 
 .estilo-botao:hover {
-    background-color: #87CEEB;
+    transition: 0.2s all;
+    background-color: #7CA0EB;
 
 }
 
@@ -158,8 +166,10 @@ body * {
     border: none;
     margin-top: 20px;
     width: 10em;
-    padding: 15px;
+    padding: 12px;
+    border-radius: 5px;
     outline: none;
+    cursor: pointer;
 }
 
 
@@ -170,7 +180,7 @@ body * {
 }
 
 #main-recuperar {
-    background: #ccc;
+    background: #808080;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -185,6 +195,7 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .campos-recuperar {
@@ -256,6 +267,7 @@ body * {
         width: 100%;
         height: auto;
         margin: 0;
+        border-radius: 0px;
     }
 
     #center {
@@ -328,6 +340,7 @@ body * {
         gap: 10px;
         background-color: #fff;
         padding: 35px;
+        border-radius: 0px;
     }
 
     #conteudo h1, #conteudo-informacoes h1, #container-recuperar h1{
@@ -397,6 +410,7 @@ body * {
         margin: 0;
         padding: 0;
         width: 100%;
+        border-radius: 0px;
     }
     
     .campos-recuperar {
