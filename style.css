@@ -326,7 +326,7 @@ body * {
         padding: 35px;
     }
 
-    #conteudo h1, #conteudo-informacoes h1{
+    #conteudo h1, #conteudo-informacoes h1, #container-recuperar h1{
         font-size: 25pt;
     }
 
@@ -349,9 +349,14 @@ body * {
         width: 98%;
         box-sizing: border-box;
         font-size: 16pt;
+        border-radius: 10px;
     }
 
-    .inputs-cadastrar label, .inputs-informacoes label {
+    #main-informacoes section {
+        width: 100%;
+    }
+
+    .inputs-cadastrar label, .inputs-informacoes label, .inputs-recuperar label {
         font-size: 17pt;
         font-weight: 600;
     }
@@ -364,7 +369,7 @@ body * {
         background-color: #4169E1;
     }
 
-    .estilo-botao {
+    .estilo-botao, #alterar, #voltarRecuperar {
         background-color: #4169E1;
         margin: 20px 0 0 0;
         font-size: 12pt;
@@ -377,7 +382,36 @@ body * {
         color: #4169E1;
         cursor: pointer;
     }
-    
 
+    #main-recuperar {
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+    
+    #container-recuperar {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .campos-recuperar {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    .campos-recuperar input {
+        font-size: 16pt;
+        border-radius: 10px;
+        padding: 3px;
+    }
+    
+    
+    
+    #alterar:hover, #voltarRecuperar:hover {
+        background-color: #4169E1;
+    }
+    
 }
 
