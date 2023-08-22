@@ -221,11 +221,14 @@ body * {
 }
 
 
+
+
 #alterar:hover, #voltarRecuperar:hover {
     transition: 0.2s all;
     background-color: #7CA0EB;
 
 }
+
 
 @media only screen and (max-width: 1000px) {
     #container {
