@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         usuarios = JSON.parse(userString)
 
 
-        console.log(usuarios)
 
 
         botao.addEventListener('click', () => {
@@ -87,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
         userString = sessionStorage.getItem('meuLogin')
         usuarios = JSON.parse(userString)
 
-        console.log(usuarios)
 
         const btnCadastrar = document.getElementById('btn-cadastrar')
         const voltar = document.getElementById('voltar')
@@ -171,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 sessionStorage.setItem('meuLogin', JSON.stringify(usuarios))
 
-                console.log(usuarios)
                 for (let i = 0; i < inputs.length; i++){
                     inputs[i].disabled = true
                 }
@@ -316,7 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
         userString = sessionStorage.getItem('meuLogin')
         usuarios = JSON.parse(userString)
 
-        console.log(usuarios)
 
         usuarios.forEach(u => {
 
@@ -440,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                 })
-                console.log(usuarios)
+
                 sessionStorage.setItem('meuLogin', JSON.stringify(usuarios));
                 editarInformacoes.style.display = "block"
                 salvarInformacoes.style.display = "none"
@@ -476,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userString = sessionStorage.getItem('meuLogin')
         usuarios = JSON.parse(userString)
 
-        console.log(usuarios)
+
         
         
 
