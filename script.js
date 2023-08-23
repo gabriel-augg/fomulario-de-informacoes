@@ -1,9 +1,7 @@
-
-
-
 const telaInformacoes = document.getElementById("main-informacoes")
 const telaCadastrar = document.getElementById("main-cadastrar")
 const telaLogin = document.getElementById('main-login')
+const telaRecuperar = document.getElementById('main-recuperar')
 
 let usuarios = []
 
@@ -16,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userString = sessionStorage.getItem('meuLogin')
     usuarios = JSON.parse(userString)
 
-    if(document.getElementById('main-login')) {
+    if(telaLogin) {
         const botao = document.getElementById("btn-login")
         const cadastrarLink = document.getElementById("cadastrar")
         const recuperarLink = document.getElementById("recuperarSenha")
@@ -90,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 
-    } else if (document.getElementById('main-cadastrar')) {
+    } else if (telaCadastrar) {
 
         userString = sessionStorage.getItem('meuLogin')
         usuarios = JSON.parse(userString)
@@ -368,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
 
-    } else if (document.getElementById('main-informacoes')) {
+    } else if (telaInformacoes) {
 
         const salvarInformacoes = document.getElementById("salvar-informacoes")
         const editarInformacoes = document.getElementById("editar-informacoes")
@@ -478,7 +476,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     document.getElementById('sobrenome').classList.remove('error-class')
                 }, 500)
-                
+
             }  else if (senhaCadastrar !== repetirSenha) {
 
                 document.getElementById('senhaCadastrar').value = ""
@@ -558,7 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
         
-    }  else if (document.getElementById('main-recuperar')) {
+    }  else if (telaRecuperar) {
 
         const btnRecuperar = document.getElementById('alterar')
         const btnVoltar = document.getElementById('voltarRecuperar')
