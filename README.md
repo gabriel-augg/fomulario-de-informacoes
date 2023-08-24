@@ -15,7 +15,7 @@ O projeto é um sistema de informação composto por quatro páginas: Login, Cad
 
 - HTML
 - CSS
-- JavaScriot
+- JavaScript
 - sessionStorage
 
 
